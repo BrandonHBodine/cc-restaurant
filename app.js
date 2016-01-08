@@ -17,6 +17,10 @@ var knex = require('knex')({
 var router = express.Router();
 var app = express();
 
+// Body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 //Require router files
 var restaurants = require('./routes/restaurants');
 
@@ -24,6 +28,7 @@ var restaurants = require('./routes/restaurants');
 app.use(express.static('public'));
 // Use router files
 app.use('/restaurants', restaurants);
+
 
 // Set templating Engine to handle bars and let it use .html
 app.set('views', './views');

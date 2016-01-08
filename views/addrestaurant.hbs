@@ -21,7 +21,7 @@
 
 <body>
   <div class="container">
-    
+
     <form class="" action="/restaurants/add" method="POST">
       <fieldset>
         <legend>Create Restaurant</legend>
@@ -47,8 +47,8 @@
             </div>
 
             <div class="form-group">
-              <label for="cuisine"></label>
-              <select id="cuisine" name="cuisine">
+              <label for="foodtype"></label>
+              <select id="foodtype" name="foodtype">
                 <option>
                   FOOD TYPE
                 </option>
@@ -62,7 +62,15 @@
               <input type="radio" name="rating" value="3">
               <input type="radio" name="rating" value="4">
               <input type="radio" name="rating" value="5">
-              <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="text" class="form-control" id="image" name="image" placeholder="image">
+            </div>
+            <div class="form-group">
+              <label for="bio">Short Bio</label>
+              <textarea class="form-control" rows="3" name="bio" id="bio" placeholder="Shor t Bio"></textarea>
+
             </div>
           </div>
           <div class="col-xs-6">
