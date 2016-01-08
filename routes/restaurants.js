@@ -8,7 +8,12 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-router.get('/', function(req, res) {
+router.get('/add', function(req, res) {
+  res.render('addrestaurant',{});
+});
+
+// define the home page route
+router.get('/add', function(req, res) {
   res.send('Restaurants home page');
 });
 

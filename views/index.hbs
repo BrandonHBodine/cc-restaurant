@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-xs-4">
 
@@ -36,10 +36,14 @@
 
     {{#restaurants}}
     <div class="col-xs-4">
-
+      {{#if restaurants}}
+      <div>
+      {{/if}}
       <div>{{this.name}}</div>
       <img height="150px" src="/images/{{this.image}}">
-
+      <div>{{this.foodtype}}</div>
+      <div>{{this.city}}, {{this.state}}</div>
+      <div>{{this.rating}}</div>
     </div>
     {{/restaurants}}
 

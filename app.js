@@ -2,6 +2,7 @@
 var express = require('express');
 var bcrypt = require('bcrypt');
 var pg = require('pg');
+var bodyParser = require('body-parser');
 
 var knex = require('knex')({
   client: 'pg',
