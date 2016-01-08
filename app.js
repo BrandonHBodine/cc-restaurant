@@ -1,7 +1,21 @@
 'use strict';
 var express = require('express');
+var bcrypt = require('bcrypt');
+var pg = require('pg');
+
+var knex = require('knex')({
+  client: 'pg',
+  connection: {
+    host     : '127.0.0.1',
+    port     : 5432,
+    user     : 'Mundizzle',
+    database : 'Mundizzle'
+  }
+});
+
 var router = express.Router();
 var app = express();
+
 //Require router files
 var restaurants = require('./routes/restaurants');
 
@@ -16,7 +30,12 @@ app.set('view engine', 'hbs');
 
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
+  // Connect to the database and retrive Restaurants
+  knex('restaurants').select().then(function(rows) {
+    console.log(rows);
+    res.render('index', { restaurants: rows });
+  });
+
 });
 
 app.listen(3000, function () {

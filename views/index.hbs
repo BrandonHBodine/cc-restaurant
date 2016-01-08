@@ -32,7 +32,18 @@
       </p>
     </div>
   </div>
-  
+  <div class="row">
+
+    {{#restaurants}}
+    <div class="col-xs-4">
+
+      <div>{{this.name}}</div>
+      <img height="150px" src="/images/{{this.image}}">
+
+    </div>
+    {{/restaurants}}
+
+  </div>
 </div>
 
 <body>
