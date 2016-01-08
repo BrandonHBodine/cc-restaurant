@@ -1,0 +1,24 @@
+{
+  "name": "cc-restaurant",
+  "version": "1.0.0",
+  "description": "Crush Code Crud App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonHBodine/cc-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonHBodine/cc-restaurant/issues"
+  },
+  "homepage": "https://github.com/BrandonHBodine/cc-restaurant#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "handlebars": "^4.0.5",
+    "hbs": "^4.0.0"
+  }
+}
